@@ -9,13 +9,14 @@
 
 <style>
 :root{
---bg:#FCE4EC; 
---main:#F06292;
---dark:#880E4F;
+/* ปรับโทนสีเป็นมินิมอลสบายตา */
+--bg:#F5F5F5; 
+--main:#D7CCC8; /* สีน้ำตาลอ่อนมินิมอล */
+--dark:#5D4037; /* สีน้ำตาลเข้ม */
 --white:#FFFFFF;
---glow:rgba(240,98,146,0.4);
---accent:#FFF176;
---status-red:#FF1744;
+--glow:rgba(215,204,200,0.4);
+--accent:#EFEBE9;
+--status-red:#A1887F; /* ปรับจุดกระพริบให้โทนเข้ากัน */
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Mitr',sans-serif;}
@@ -29,7 +30,7 @@ overflow-x: hidden;
 min-height: 100vh;
 }
 
-/* --- พื้นหลังอิโมจิฟุ้งๆ (คงไว้) --- */
+/* --- พื้นหลังอิโมจิฟุ้งๆ (คงไว้ตามโครงสร้างเดิม) --- */
 .bg-emojis {
   position: fixed;
   top: 0;
@@ -71,7 +72,7 @@ border:2px solid var(--main);
 h1,h2,h3{color:var(--dark);}
 .center{text-align:center;}
 
-/* --- โลโก้และอิโมจิรอบโลโก้ (คงไว้) --- */
+/* --- โลโก้และอิโมจิรอบโลโก้ (คงไว้ 100%) --- */
 .logo-wrapper {
   position: relative;
   width: 200px;
@@ -140,7 +141,7 @@ gap: 8px;
 
 .btn-outline{
 background:#fff;
-border:2px dashed var(--main);
+border:2px dashed var(--main); /* ปุ่มเส้นประที่ต้องคงไว้ */
 color:var(--dark);
 }
 
@@ -162,7 +163,7 @@ color:var(--dark);
 
 .btn-main{
 background:var(--main);
-color:#fff;
+color:var(--dark);
 }
 
 .step{
@@ -174,7 +175,7 @@ margin-bottom:12px;
 
 .step-num{
 background:var(--main);
-color:#fff;
+color:var(--dark);
 width:26px;height:26px;
 border-radius:50%;
 display:flex;
@@ -190,7 +191,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:10px;
-background:#fff5f8;
+background:#fafafa;
 padding:10px 15px;
 border-radius:15px;
 border-left: 4px solid var(--main);
@@ -198,7 +199,7 @@ border-left: 4px solid var(--main);
 
 .price-tag{
 background:var(--main);
-color:#fff;
+color:var(--dark);
 padding:3px 12px;
 border-radius:20px;
 font-size:14px;
@@ -227,18 +228,18 @@ background:#fff;
 text-decoration:none;
 color:var(--dark);
 font-size:13px;
-border:1px solid #f8bbd0;
+border:1px solid var(--main);
 }
 
 .small{font-size:12px;opacity:.7;margin-top:10px;}
 
 .rule-box {
-background: #fff9c4;
+background: #EFEBE9;
 padding: 15px;
 border-radius: 15px;
 font-size: 14px;
 margin-top: 15px;
-border: 1px dashed #fbc02d;
+border: 1px dashed var(--dark);
 }
 </style>
 </head>
@@ -246,9 +247,9 @@ border: 1px dashed #fbc02d;
 <body>
   <div class="bg-emojis">
     <span class="floating-emoji" style="left: 10%; animation-delay: 0s;">🪨</span>
-    <span class="floating-emoji" style="left: 25%; animation-delay: 2s;">🎨</span>
+    <span class="floating-emoji" style="left: 25%; animation-delay: 2s;">🌿</span>
     <span class="floating-emoji" style="left: 45%; animation-delay: 4s;">⭐️</span>
-    <span class="floating-emoji" style="left: 70%; animation-delay: 6s;">💎</span>
+    <span class="floating-emoji" style="left: 70%; animation-delay: 6s;">🪵</span>
     <span class="floating-emoji" style="left: 85%; animation-delay: 8s;">✨</span>
   </div>
 
@@ -258,60 +259,61 @@ border: 1px dashed #fbc02d;
 
 <div class="logo-wrapper">
   <span class="logo-deco" style="top: 0; left: 10%;">🪨</span>
-  <span class="logo-deco" style="bottom: 10%; right: 5%;">🎨</span>
+  <span class="logo-deco" style="bottom: 10%; right: 5%;">🌿</span>
   <span class="logo-deco" style="top: 20%; right: 0%;">⭐️</span>
   <div class="logo">
-    <img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="PS STONE logo">
+    <img src="https://www.facebook.com/psstone2552/photos/a.2081822791845112/2081822748511783/?type=3" alt="PS STONE logo">
   </div>
 </div>
 
 <h1>PS STONE</h1>
 <p style="color:var(--dark);opacity:.8;margin:10px 0 20px;">
-ร้านขายหินตกแต่ง ⭐️
+ร้านขายหินตกแต่ง ⭐️ 
 </p>
 
 <div class="badges">
+<div class="badge">🪨 หินตกแต่งสวน</div>
 <div class="badge">🎨 วาดรูป</div>
 <div class="badge">🧸 ออกแบบคาแรคเตอร์</div>
-<div class="badge">✨ ตัวการ์ตูน</div>
-<div class="badge">🪨 หินตกแต่ง</div>
+<div class="badge">✨ ดีไซน์มินิมอล</div>
 </div>
 
-<a href="https://line.me/ti/p/jjnr_mm" class="btn btn-outline">
-<span class="status-dot"></span> เช็คคิวงาน/สั่งซื้อติดต่อทางไลน์ 💧
+<a href="https://line.me/ti/p/TVdfazbINE" class="btn btn-outline">
+<span class="status-dot"></span> เช็คคิวงาน/สอบถามคิววันนี้นะคะ 🪨
 </a>
 </div>
 
 <div class="section">
-<h2>📋 ขั้นตอนการสั่ง</h2>
+<h2>📋 ขั้นตอนการสั่งซื้อ</h2>
 <div class="step"><div class="step-num">1</div><div>กรอกฟอร์ม เขียนรายละเอียดร้านค้า</div></div>
-<div class="step"><div class="step-num">2</div><div>ใส่ลิงก์ ตัวอย่างงาน และแนบโลโก้มาให้พร้อม</div></div>
+<div class="step"><div class="step-num">2</div><div>ใส่ลิงก์ ตัวอย่างงานมาให้พร้อม หากมีโลโก้ให้แนบมา</div></div>
 <div class="step"><div class="step-num">3</div><div>ส่งงานให้เช็ค แจ้งยอด และชำระเงิน</div></div>
-<div class="step"><div class="step-num">4</div><div>รอรับลิงก์งานได้เลยค่า</div></div>
+<div class="step"><div class="step-num">4</div><div>รอรับลิงก์งานได้เลยค่า (ปกติ 4-8 ชม.)</div></div>
 
-<a href="https://julie-vwb.github.io/pinkjulie-land/" class="btn btn-main">ดูตัวอย่างผลงาน 🧸</a>
-<a href="https://www.facebook.com/psstone2552" class="btn btn-outline">Facebook ร้านค้า ✨</a>
+<a href="https://julie-vwb.github.io/pinkjulie-land/" class="btn btn-main">ดูตัวอย่างผลงานทั้งหมด ⭐️</a>
+<a href="https://www.facebook.com/psstone2552" class="btn btn-outline">เยี่ยมชมเพจ Facebook ✨</a>
 </div>
 
 <div class="section">
-<h2>💰 เงื่อนไข & ราคา</h2>
-<div class="price-row"><span>ระยะเวลารองานปกติ</span><span class="price-tag">4-8 ชม.</span></div>
-<div class="price-row"><span>งานเร่ง (Fast Track)</span><span class="price-tag">*2 ของราคา</span></div>
-<div class="price-row"><span>ออกแบบคาแรคเตอร์</span><span class="price-tag">สอบถามราคา</span></div>
+<h2>💰 บริการของเรา</h2>
+<div class="price-row"><span>หินตกแต่งสวน/ทำน้ำตก</span><span class="price-tag">สอบถามราคา</span></div>
+<div class="price-row"><span>วาดรูป/ออกแบบตัวการ์ตูน</span><span class="price-tag">เริ่มต้น 59฿</span></div>
+<div class="price-row"><span>ออกแบบคาแรคเตอร์ร้านค้า</span><span class="price-tag">เริ่มต้น 79฿</span></div>
+<div class="price-row"><span>งานเร่ง (Fast Track)</span><span class="price-tag">*2 ของราคาปกติ</span></div>
 
 <div class="rule-box">
 <strong>📍 กฎของร้าน:</strong><br>
-• โอนเงินแล้วไม่คืนเงินทุกกรณีนะคะ<br>
-• ยกเลิกหลังส่งบรีฟ (เริ่มงานแล้ว) คืนเงิน 50%<br>
-• ยกเลิกหลังจากเช็คงาน = ไม่คืน และส่งงานปกติ
+• โอนเงินแล้วไม่คืนเงินทุกกรณี<br>
+• ยกเลิกหลังส่งบรีฟ (เริ่มงานแล้ว) คืน 50%<br>
+• ยกเลิกหลังจากเช็คงาน = ไม่คืน และส่งงานให้ปกติ
 </div>
 </div>
 
 <div class="footer">
-<a href="https://line.me/ti/p/jjnr_mm" class="btn btn-main">สั่งงาน / สอบถามทาง LINE 🎀</a>
+<a href="https://line.me/ti/p/TVdfazbINE" class="btn btn-main">สั่งงาน / สอบถามทาง LINE 📱</a>
 <div class="socials">
 <a href="https://www.facebook.com/psstone2552">Facebook</a>
-<a href="https://line.me/ti/p/jjnr_mm">Line Official</a>
+<a href="https://line.me/ti/p/TVdfazbINE">Line</a>
 <a href="https://julie-vwb.github.io/pinkjulie-land/">Portfolio</a>
 </div>
 <p class="small">© 2026 PS STONE - ขอบคุณที่ใช้บริการค่ะ</p>
